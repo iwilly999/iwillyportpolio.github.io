@@ -1,0 +1,1269 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은고딕";
+    color: #333;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+img{
+    border: none;
+    display: block;
+}
+
+
+/* 헤더 */
+.header_wrap{
+    width: 100%;
+    height:240px;
+    background-image: url(../images/헤더-배경_01_01.jpg);
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;    
+    left: 0;
+    z-index: 5000;
+}
+
+.header{
+    margin: 0 auto;
+    width: 1200px;
+    height: 240px;    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header>h1{    
+    display: flex;
+    position: absolute;
+    top: 75px;
+    left: 183px;
+    opacity: 0;
+    animation: left-200 1s 1.5s forwards;
+}
+
+@keyframes left-200 {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0, 0);
+        opacity: 1;
+    }
+
+}
+.header>h1>img{
+    position: absolute;
+    top: -15px;
+    left: 280px;
+}
+
+.header>h1>a{
+    display: flex;
+    color: #fff;
+    font-size: 1.25em;
+    text-shadow: 2px 2px 1px #000;
+}
+
+.header>h1>a:hover{
+    color: #ffec48;
+    Transform:translateY(-10px);
+    Transform:scaleY(20px);
+    Transform:skewX(-10deg);
+}
+
+.name_tac{
+    position: absolute;
+    right: 150px;     opacity: 0;
+    animation: right200 1s 2s forwards;
+}
+
+@keyframes right200 {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0, 0);
+        opacity: 1;
+    }
+
+}
+.gnb_wrap{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 190px;
+    left: 0;  right: 0;  margin: 0 auto;
+}
+
+.gnb{
+    width: 400px;
+    height: 40px;
+}
+
+.gnb ul{
+    width: 100%;
+    display: flex;
+}
+
+.gnb ul li{
+    margin-right: 5px;
+}
+.gnb ul li:nth-of-type(1){
+    width: 127px;
+    height: 48px;
+    background-color: #ffec48;
+    border-radius: 34px 12px 0 0;
+    box-shadow:  1px 0 2px#3333336b;
+    z-index: 250;
+}
+.gnb ul li:nth-of-type(2){
+    width: 127px;
+    height: 40px;
+    background-color: #f97f59;
+    border-radius: 34px 12px 0 0;
+    box-shadow:  1px 0 2px#3333336b;
+    z-index: 200;
+}
+.gnb ul li:nth-of-type(3){
+    width: 127px;
+    height: 40px;
+    background-color: #1e6747;
+    border-radius: 34px 12px 0 0;
+    box-shadow:  1px 0 2px#3333336b;
+    z-index: 150;
+}
+
+
+.gnb ul li a{
+    width: 130px;
+    height: 48px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.gnb ul li:nth-of-type(1):hover a{
+    color:#154933 ;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #ffec48;
+    border-radius: 28px 8px 0 0;
+    box-shadow:  1px 0 2px#3333336b;
+    Transform:translate3d(0,-8px,0);
+}
+
+.gnb ul li:nth-of-type(2):hover a{
+    color:#0c2b1d ;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #f97f59;
+    border-radius: 28px 8px 0 0;
+    box-shadow:  1px 0 2px#3333336b;
+    Transform:translate3d(0,-8px,0);   
+}
+
+.gnb ul li:nth-of-type(3):hover a{
+    color:#eeda28 ;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #1e6747;
+    border-radius: 28px 8px 0 0;
+    box-shadow:  1px 0 2px#3333336b; 
+    Transform:translate3d(0,-8px,0);  
+}
+
+.gray_bg{
+    width: 1100px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
+    z-index: 300;
+}
+/* 헤더 끝*/
+
+/* 바디 wrap*/
+.body_wrap{
+    width:100%;
+    height: auto;
+    background-image: url("../images/배경_고양이_합한것.jpg");
+    position: relative;    
+    top: 240px;
+}
+
+.bord_hj{
+    /* display: none; */
+    width: 1100px;
+    margin: 0 auto;
+    height: 2200px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px #33333350; 
+}
+
+/* intro */
+.intro{    
+    width: 100%;
+    position: relative;
+}
+
+
+/* 버튼클릭시 스크롤 위치 시작 */
+#my_info{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: -200px;
+}
+
+#my_skill{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 350px;
+}
+
+#my_license{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 900px;
+}
+/* 버튼클릭시 스크롤 위치 끝 */
+
+/* intro 버튼*/
+
+.intro_btn{
+    width: 100px;
+    height:auto; 
+    position: fixed;
+    top: 380px; left: 312px;
+}
+
+.intro_btn>li{
+    margin-bottom: 25px;
+}
+.intro_btn>li>a{
+    text-align: center;
+    line-height: 50px;    
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.intro_btn>li:nth-of-type(1){
+    width: 100px;
+    height: 50px;
+    background-color:#4abd89;
+    border-radius: 25px 0 0 7px;
+    box-shadow:  0 1px 2px #3333336b;
+}
+
+.intro_btn>li:nth-of-type(2){
+    width: 100px;
+    height: 50px;
+    background-color:#9dde8b;
+    border-radius: 25px 0 0 7px;
+    box-shadow:  0 1px 2px #3333336b;
+}
+
+.intro_btn>li:nth-of-type(3){
+    width: 100px;
+    height: 50px;
+    background-color:#e6ff94;
+    border-radius: 25px 0 0 7px;
+    box-shadow:  0 1px 2px #3333336b;
+}
+
+
+.intro_btn>li:nth-of-type(1):hover a{
+    width: 110px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#4abd89;
+    border-radius: 25px 0 0 7px;    
+    box-shadow:  0 1px 2px #3333336b;
+    Transform:translateX(-10px);
+    Transform:scaleX(10px);
+}
+
+.intro_btn>li:nth-of-type(2):hover a{
+    width: 110px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#9dde8b;
+    border-radius: 25px 0 0 7px;    
+    box-shadow:  0 1px 2px #3333336b;
+    Transform:translateX(-10px);
+    Transform:scaleX(10px);
+}
+
+.intro_btn>li:nth-of-type(3):hover a{
+    width: 110px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#e6ff94;
+    border-radius: 25px 0 0 7px;    
+    box-shadow:  0 1px 2px #3333336b;
+    Transform:translateX(-10px);
+    Transform:scaleX(10px);
+}
+
+
+/* intro_ 내용*/
+.intro_cont{
+    width: 1080px;    
+    height: 1990px;
+    margin: 0 auto;
+    background-color: #f8ee2f;
+    border-radius: 10px 10px 0 0;
+}
+
+.soozi>img{
+   position: absolute;
+   top:170px;  right: 10px;
+   width: 40%;
+   opacity: 0.9;
+
+}
+
+/* 자기소개 */
+
+.intro_info{
+    width: 300px;
+    height: 70px;
+    position: absolute;
+    top: 180px;
+    left: 200px;
+
+}
+.intro_info div{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #333;
+}
+.intro_info div>img{
+    width: 19%;
+}
+.intro_info h3{
+    font-size: 24px;
+    text-shadow: 0.5px 0.5px 0.5px #204e15;
+}
+
+.intro_info div:hover img{
+    transform: rotateY(180deg) scale(1.1,1.1);
+}
+.intro_info div:hover h3{
+    font-size: 26px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+
+.intro_info p{
+    font-size: 18px;
+    line-height: 2.5em;
+    font-weight: 600;
+}
+
+
+
+/* 스킬  기술 */
+
+.intro_skill{
+    width: 300px;
+    height: 65px;
+    position: absolute;
+    top: 675px;
+    left: 200px;
+    border-bottom: 1px solid #333;
+    z-index: 1000;
+}
+
+.intro_skill .skill_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.skill_title>img{
+    width: 19%;
+}
+
+.skill_title h3{
+    font-size: 24px;
+    text-shadow: 0.5px 0.5px 0.5px #204e15;
+}
+
+.skill_title:hover img{
+    transform: rotateY(180deg) scale(1.1,1.1);
+}
+.skill_title:hover h3{
+    font-size: 26px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+
+.intro_skill ul{
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: -25px;
+}
+
+.skill_icon img{
+    width: 60%;
+}
+.skill_icon{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+/* 자격증 license */
+
+.intro_license_03 {
+    width: 800px;
+    position: absolute;
+    top: 1250px;
+    left: 200px;
+}
+
+.license_title{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.license_title:hover img{
+    transform: rotateY(180deg) scale(1.1,1.1);
+}
+.license_title:hover h3{
+    font-size: 26px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.license_title>img{
+    width: 19%;
+}
+
+.license_title>h3{
+    font-size: 24px;
+    text-shadow: 0.5px 0.5px 0.5px #204e15;
+}
+
+.license_list{
+    font-size: 18px;
+    line-height: 3em;
+    font-weight: 600;
+}
+
+.license_list>li:nth-child(even){
+    background-color: #f5e237;
+}
+
+.license_list>li:hover{
+    background-color: #fcd600;
+}
+
+
+
+/* art 디자인 */
+
+.art_bord{
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    height: 7000px;
+    background-color: #ffffff;
+    /* box-shadow: 1px 1px 3px #33333350; */ 
+}
+
+.art{    
+    width: 100%;
+    position: relative;
+}
+/* art 버튼 클릭시 스크롤 위치 시작 */
+#gonmo{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+}
+
+#poster{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 730px;
+}
+
+#potoiller{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 1900px;
+}
+
+#website{
+    width: 1000px;
+    height: 200px;
+    position: absolute;
+    top: 4200px;
+}
+
+
+/* art 버튼*/
+.art_btn{
+    width: 100px;
+    height: 240px; 
+    box-shadow: 2px 2px 2px #e0e0e0;
+    position: fixed;
+    top: 420px; left: 280px;
+    z-index: 5000;
+}
+
+.art_btn>li{
+    width: 100%;
+    height: 60px;
+    padding-bottom: 20px;
+}
+.art_btn>li>a{
+    text-align: center;
+    line-height: 50px;    
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.art_btn>li:nth-of-type(1){
+    width: 100px;
+    height: 60px;
+    background-color:#f79999;
+    /* border-radius: 25px 0 0 0; */
+    /* box-shadow:  0 1px 2px #3333336b; */
+}
+
+.art_btn>li:nth-of-type(2){
+    width: 100px;
+    height: 60px;
+    background-color:#fcb977;
+    /* border-radius: 25px 0 0 0; */
+    /* box-shadow:  0 1px 2px #3333336b; */
+}
+
+.art_btn>li:nth-of-type(3){
+    width: 100px;
+    height: 60px;
+    background-color:#fce6af;
+    /* border-radius: 25px 0 0 0; */
+    /* box-shadow:  0 1px 2px #3333336b; */
+}
+
+.art_btn>li:nth-of-type(4){
+    width: 100px;
+    height: 60px;
+    background-color:#e5e996;
+    /* border-radius: 25px 0 0 0; */
+    /* box-shadow:  0 1px 2px #3333336b; */
+}
+
+.art_btn>li:nth-of-type(1):hover a{
+    width: 100px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    background-color:#f17d7d;
+    /* border-radius: 25px 0 0 5px;   */  
+    /* box-shadow:  0 1px 2px #3333336b; */
+    /* Transform:translateX(-20px);
+    Transform:scaleX(20px); */
+}
+
+.art_btn>li:nth-of-type(2):hover a{
+    width: 100px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#faa653;
+   /*  border-radius: 25px 0 0 5px;    */ 
+    /* box-shadow:  0 1px 2px #3333336b; */
+    /* Transform:translateX(-20px);
+    Transform:scaleX(20px); */
+}
+
+.art_btn>li:nth-of-type(3):hover a{
+    width: 100px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#fadb8c;
+    /* border-radius: 25px 0 0 5px;   */  
+    /* box-shadow:  0 1px 2px #3333336b; */
+    /* Transform:translateX(-20px);
+    Transform:scaleX(20px); */
+}
+
+.art_btn>li:nth-of-type(4):hover a{
+    width: 100px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#dee46d;
+    /* border-radius: 25px 0 0 5px;     */
+    /* box-shadow:  0 1px 2px #3333336b; */
+    /* Transform:translateX(-20px);
+    Transform:scaleX(20px); */
+}
+
+
+/* art_cont 내용*/
+.art_cont{
+    width: 1100px;  
+    margin: 0 auto;
+    /* background-color: #ffe8e4; */
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+/* 일러스트 작품 */
+
+.art_ai{
+    width: 100%;
+    position: absolute;
+    top: 110px;
+    left: 100px;
+
+}
+.art_ai_title{
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.art_ai_title h3{
+    font-size: 24px;
+}
+
+.art_ai_title:hover{
+    width: 230px;
+    transition: 0.5s;
+}
+
+.art_ai_title:hover img{
+    transform: rotateY(360deg);
+    transition: 1s;
+}
+
+
+/* 일러스트 슬라이드 */
+.ai_contents_slide{ 
+    width: 900px; 
+    height: 450px; 
+    overflow: hidden; 
+    position: relative;     
+}
+
+.ai_contents_slide ul{ 
+    position: absolute;
+    top: 40px;   left: 0;
+    width: 2700px; 
+    height: 400px; 
+    display: flex; 
+}
+
+.ai_contents_slide li{ 
+    width: 900px; 
+    height: 320px; 
+}
+
+/* 공모전 2개 */
+.ai_contents_gonmo{
+    width: 100%;
+    height: 70px;
+}
+
+.ai_contents_gonmo>h3{
+    width: 175px;
+    height: 40px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+.ai_contents_gonmo>h3 span{
+    display: block;
+    font-size: 12px;
+}
+
+.ai_contents_gonmo>h3.active span{
+    transform: rotate(180deg);
+}
+
+.ai_contents_gonmo_list{
+    width: 100%;
+    height: 430px;
+    display: flex;
+}
+.ai_contents_gonmo_list>li{
+    width: 400px;
+    height: 300px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ai_contents_gonmo_list>li>img{
+    margin-bottom: 10px;
+}
+
+/* 포스터 4개 */
+.ai_contents_poster{
+    width: 100%;
+    height: 70px;
+}
+
+.ai_contents_poster>h3{
+    width: 175px;
+    height: 40px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+.ai_contents_poster>h3 span{
+    display: block;
+    font-size: 12px;
+}
+
+.ai_contents_poster>h3.active span{
+    transform: rotate(180deg);
+}
+.ai_contents_poster_list{
+    width: 1000px;
+    height: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ai_contents_poster_list>li{
+    width: 300px;
+    margin: 10px;
+}
+.ai_contents_poster_list>li>img{
+    width: 300px;
+    margin-bottom: 10px;
+}
+.ai_contents_poster_list>li>p{
+    width: 300px;
+    text-align: center;
+}
+
+/* 일러/포토샵 10개 */
+.ai_contents_potoiller{
+    width: 100%;
+    height: 70px;
+}
+
+.ai_contents_potoiller>h3{
+    width: 175px;
+    height: 40px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+.ai_contents_potoiller>h3 span{
+    display: block;
+    font-size: 12px;
+}
+
+.ai_contents_potoiller>h3.active span{
+    transform: rotate(180deg);
+}
+
+.ai_contents_potoiller_list{
+    width: 1000px;
+    height: 2200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ai_contents_potoiller_list>li{
+    width: 400px;
+    margin-right: 50px ;
+    margin-bottom: 50px;
+}
+
+.ai_contents_potoiller_list>li:nth-of-type(7)>img{
+    border: 1px solid #ff7290;
+}
+
+.ai_contents_potoiller_list>li:nth-of-type(8)>img{
+    border: 1px solid #ff7290;
+}
+.ai_contents_potoiller_list>li:nth-of-type(9){
+    width: 250px;
+}
+.ai_contents_potoiller_list>li:nth-of-type(9)>img{
+    width: 250px;
+} 
+.ai_contents_potoiller_list>li:nth-of-type(9)>p{
+    width: 250px;
+} 
+.ai_contents_potoiller_list>li:nth-of-type(10){
+    width: 550px;
+}
+.ai_contents_potoiller_list>li:nth-of-type(10)>img{
+    width: 550px;
+} 
+.ai_contents_potoiller_list>li:nth-of-type(10)>p{
+    width: 550px;
+} 
+.ai_contents_potoiller_list>li>img{
+    width: 400px;
+    margin-bottom: 10px;
+}
+.ai_contents_potoiller_list>li>p{
+    width: 400px;
+    text-align: center;
+}
+
+
+/* 웹사이트  */
+.ai_contents_website{
+    width: 100%;
+    height: 70px;
+}
+
+.ai_contents_website>h3{
+    width: 175px;
+    height: 40px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+.ai_contents_website>h3 span{
+    display: block;
+    font-size: 12px;
+}
+
+.ai_contents_website>h3.active span{
+    transform: rotate(180deg);
+}
+
+.ai_contents_website_list{
+    width: 1000px;
+    height: 1000px;
+}
+.ai_contents_website>li{
+    width: 100%;
+}
+
+.ai_contents_website_list>li>p{
+    width: 400px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #444;
+}
+
+.ai_contents_website_list>li>a{
+    width: 400px;
+    margin-bottom: 20px;
+    color: rgb(132, 132, 253);
+    text-decoration: underline;
+}
+
+.ai_contents_website_list>li>img{
+    width: 900px;
+}
+
+
+
+/* 상품 상세페이지 */
+
+.product_bord{
+    display: none;
+    width: 100%;
+    height: 10000px;
+    background-color: #ffffff;
+}
+
+.product_page{    
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* product_page 버튼 클릭시 스크롤 위치 시작 */
+#farm{
+    /* width: 1000px;
+    height: 50px; */
+    position: absolute;
+    top: 400px;
+}
+
+#seafood{
+    /* width: 1000px;
+    height: 50px; */
+    position: absolute;
+    top: 11000px;
+}
+
+#fruit{
+    /* width: 1000px;
+    height: 50px; */
+    position: absolute;
+    top: 19090px;
+}
+
+#uniform{
+    /* width: 1000px;
+    height: 50px; */
+    position: absolute;
+    top: 29570px;
+}
+
+/* product_page 버튼*/
+.product_page_btn{
+    width: 180px;
+    height: 240px; 
+    box-shadow: 2px 2px 2px #e0e0e0;
+    position: fixed;
+    top: 420px; left: 280px;
+    z-index: 5000;
+}
+
+.product_page_btn>li{
+    width: 100%;
+    height: 60px;
+    padding-bottom: 20px;
+}
+
+.product_page_btn>li>a{
+    text-align: center;
+    line-height: 50px;    
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product_page_btn>li:nth-of-type(1){
+    width: 180px;
+    height: 60px;
+    background-color:#f79999;
+}
+
+.product_page_btn>li:nth-of-type(2){
+    width: 180px;
+    height: 60px;
+    background-color:#fcb977;
+}
+
+.product_page_btn>li:nth-of-type(3){
+    width: 180px;
+    height: 60px;
+    background-color:#fce6af;
+}
+
+.product_page_btn>li:nth-of-type(4){
+    width: 180px;
+    height: 60px;
+    background-color:#e5e996;
+}
+
+.product_page_btn>li:nth-of-type(1):hover a{
+    width: 180px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    background-color:#f17d7d;
+}
+
+.product_page_btn>li:nth-of-type(2):hover a{
+    width: 180px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#faa653;
+}
+
+.product_page_btn>li:nth-of-type(3):hover a{
+    width: 180px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#fadb8c;
+}
+
+.product_page_btn>li:nth-of-type(4):hover a{
+    width: 180px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color:#dee46d;
+}
+
+
+/* product_page_cont 내용 */
+.product_page_cont{
+    width: 900px; 
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 상세페이지 슬라이드 */
+.product_page_slide{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+}
+.product_page_sl_title{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.product_page_sl_title>h3{
+    font-size: 24px;
+}
+
+.product_page_sl_title:hover{
+    width: 330px;
+    transition: 0.5s;
+}
+
+.product_page_sl_title:hover img{
+    transform: rotateY(360deg);
+    transition: 1s;
+}
+
+.product_page_sl_list{
+    width: 400px; 
+    height: 500px;
+    overflow: hidden; 
+    position: relative; 
+    border: 1px solid #333; 
+}
+
+.product_page_sl_list>ul{
+    width: 100%;
+    height: 500px;
+    display: flex;       
+    position: absolute;
+}
+
+.product_page_sl_list>ul>li>img{
+    width: 400px;
+    display: flex;    
+}
+
+
+.farm{
+    width: 1300px;
+}
+/* 해신탕 / 군유산 녹차 상위 ul */
+.farm_wrap{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 해신탕 / 군유산 녹차 */
+.haesintang{
+    width: 100%;
+    margin-right: 170px;
+    overflow: hidden;
+}
+
+.haesintang>h3{
+    width: 250px;
+    height: 45px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+
+.haesintang>h3>span{
+    display: block;
+    font-size: 12px;
+}
+
+.haesintang>h3.active span{
+    transform: rotate(180deg);
+}
+.haesintang_page{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.haesintang_page>li{
+    margin-right: 100px;
+}
+
+.haesintang_page>li>img{
+    width: 400px;
+}
+
+
+/* 장어탕 / 오이소박이 */
+.jang-eotang{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    margin-right: 170px;
+    overflow: hidden;
+}
+
+.jang-eotang>h3{
+    width: 250px;
+    height: 45px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+
+.jang-eotang>h3>span{
+    display: block;
+    font-size: 12px;
+}
+
+.jang-eotang>h3.active span{
+    transform: rotate(180deg);
+}
+.jang-eotang_page{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.jang-eotang_page>li{
+    margin-right: 100px;
+}
+
+.jang-eotang_page>li>img{
+    width: 400px;
+}
+
+
+/* 전복장 / 싸리울노각 */
+.jeonbogjang{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    margin-right: 170px;
+    overflow: hidden;
+}
+
+.jeonbogjang>h3{
+    width: 250px;
+    height: 45px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+
+.jeonbogjang>h3>span{
+    display: block;
+    font-size: 12px;
+}
+
+.jeonbogjang>h3.active span{
+    transform: rotate(180deg);
+}
+.jeonbogjang_page{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.jeonbogjang_page>li{
+    margin-right: 100px;
+}
+
+.jeonbogjang_page>li>img{
+    width: 400px;
+}
+
+/* 막걸리식초 / 진도강황 */
+.maggeollisigcho{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    margin-right: 170px;
+    overflow: hidden;
+}
+
+.maggeollisigcho>h3{
+    width: 250px;
+    height: 45px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    cursor : pointer;
+}
+
+.maggeollisigcho>h3>span{
+    display: block;
+    font-size: 12px;
+}
+
+.maggeollisigcho>h3.active span{
+    transform: rotate(180deg);
+}
+.maggeollisigcho_page{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.maggeollisigcho_page>li{
+    margin-right: 100px;
+}
+
+.maggeollisigcho_page>li>img{
+    width: 400px;
+}
+
+
